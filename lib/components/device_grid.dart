@@ -18,28 +18,18 @@ class DevicesGridDashboard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Padding(
-            padding: EdgeInsets.only(bottom: 10),
-            child: Text(
-              "Devices",
-              style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 17),
-            ),
-          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               GestureDetector(
                 onTap: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => BarangPage()));
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const BarangPage()));
                 },
                 child: CardField(
                   size,
                   Colors.blue,
-                  Icon(
+                  const Icon(
                     Icons.filter_1_sharp,
                     color: Colors.white,
                   ),
@@ -48,13 +38,13 @@ class DevicesGridDashboard extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => BarangPage()));
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const BarangPage()));
                 },
                 child: CardField(
                   size,
                   Colors.amber,
-                  Icon(Icons.filter_2_sharp, color: Colors.white),
+                  const Icon(Icons.filter_2_sharp, color: Colors.white),
                   'Barang Masuk',
                 ),
               ),
@@ -65,21 +55,21 @@ class DevicesGridDashboard extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => BarangPage()));
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const BarangPage()));
                 },
                 child: CardField(
                   size,
                   Colors.orange,
-                  Icon(Icons.filter_3_sharp, color: Colors.white),
+                  const Icon(Icons.filter_3_sharp, color: Colors.white),
                   'Barang Keluar',
                 ),
               ),
               CardField(
                 size,
                 Colors.teal,
-                Icon(Icons.sports_cricket_sharp, color: Colors.white),
-                'Cricket bat',
+                const Icon(Icons.image_rounded, color: Colors.white),
+                'Comming Soon',
               ),
             ],
           ),
@@ -89,14 +79,14 @@ class DevicesGridDashboard extends StatelessWidget {
               CardField(
                 size,
                 Colors.purple,
-                Icon(Icons.wifi_outlined, color: Colors.white),
-                'Sensors',
+                const Icon(Icons.image_rounded, color: Colors.white),
+                'Comming Soon',
               ),
               CardField(
                 size,
                 Colors.green,
-                Icon(Icons.air_outlined, color: Colors.white),
-                'Air Condition',
+                const Icon(Icons.image_rounded, color: Colors.white),
+                'Comming Soon',
               ),
             ],
           )

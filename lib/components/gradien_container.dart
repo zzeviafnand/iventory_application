@@ -4,7 +4,7 @@ import 'constant.dart';
 
 Container GradientContainer(Size size) {
   return Container(
-    height: size.height * .3,
+    height: size.height * .2,
     width: size.width,
     decoration: const BoxDecoration(
       borderRadius: BorderRadius.only(
@@ -15,7 +15,7 @@ Container GradientContainer(Size size) {
     child: Container(
       decoration: BoxDecoration(
           borderRadius: const BorderRadius.only(
-            bottomLeft: Radius.circular(100),
+            bottomLeft: Radius.circular(60),
           ),
           gradient: LinearGradient(colors: [
             secondaryColor.withOpacity(0.9),

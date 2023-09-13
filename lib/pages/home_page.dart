@@ -10,17 +10,17 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-        backgroundColor: Color(0xfff5f7fa),
+        backgroundColor: const Color(0xfff5f7fa),
         body: Column(children: [
           Stack(
             children: [
               Container(
-                height: size.height * .4,
+                height: size.height * .3,
                 width: size.width,
               ),
               GradientContainer(size),
               Positioned(
-                top: size.height * .15,
+                top: size.height * .10,
                 left: 30,
                 child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,20 +28,10 @@ class HomePage extends StatelessWidget {
                     Text(
                       "Iventory",
                       style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontWeight: FontWeight.bold,
                           fontSize: 26),
                     ),
-                    // Padding(
-                    //   padding: EdgeInsets.only(top: 10, bottom: 5),
-                    //   child: Text(
-                    //     "Rooms",
-                    //     style: TextStyle(
-                    //         color: Colors.white,
-                    //         fontWeight: FontWeight.w600,
-                    //         fontSize: 17),
-                    //   ),
-                    // ),
                   ],
                 ),
               )
