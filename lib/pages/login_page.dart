@@ -19,17 +19,17 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
-      body: SafeArea(
+      body: SingleChildScrollView(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(height: 5),
+              const SizedBox(height: 35),
 
               // logo
               const Icon(
                 Icons.lock,
-                size: 100,
+                size: 90,
               ),
 
               const SizedBox(height: 30),
