@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../components/appbar_content.dart';
 import '../components/bk_widget.dart';
-import '../components/constant.dart';
-import '../components/data_widget.dart';
-import '../components/gradien_container.dart';
 
 class BarangKeluarPage extends StatefulWidget {
   const BarangKeluarPage({super.key});

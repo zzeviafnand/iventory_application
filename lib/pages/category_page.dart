@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iventory_application/components/category_data_widget.dart';
 
 import '../components/appbar_content.dart';
-import '../components/constant.dart';
 import '../components/data_widget.dart';
-import '../components/gradien_container.dart';
 
 class CategoryPage extends StatefulWidget {
   const CategoryPage({super.key});

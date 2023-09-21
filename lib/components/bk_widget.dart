@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iventory_application/components/item_show_widget.dart';
 
-import 'box_widget.dart';
-
 class BkWidget extends StatelessWidget {
   const BkWidget({
     super.key,
