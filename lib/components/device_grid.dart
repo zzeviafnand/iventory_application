@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:iventory_application/pages/barang_masuk_page.dart';
+import 'package:iventory_application/pages/category_page.dart';
+import 'package:iventory_application/pages/item_condition_page.dart';
 
+import '../pages/barang_keluar_page.dart';
 import '../pages/data_barang_page.dart';
 import 'card_field.dart';
 
@@ -39,7 +43,7 @@ class DevicesGridDashboard extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const BarangPage()));
+                      builder: (context) => const BarangMasukPage()));
                 },
                 child: CardField(
                   size,
@@ -56,7 +60,7 @@ class DevicesGridDashboard extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const BarangPage()));
+                      builder: (context) => const BarangKeluarPage()));
                 },
                 child: CardField(
                   size,
@@ -65,28 +69,46 @@ class DevicesGridDashboard extends StatelessWidget {
                   'Barang Keluar',
                 ),
               ),
-              CardField(
-                size,
-                Colors.teal,
-                const Icon(Icons.image_rounded, color: Colors.white),
-                'Comming Soon',
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const ItemConditionPage()));
+                },
+                child: CardField(
+                  size,
+                  Colors.teal,
+                  const Icon(Icons.image_rounded, color: Colors.white),
+                  'Kondisi Barang',
+                ),
               ),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              CardField(
-                size,
-                Colors.purple,
-                const Icon(Icons.image_rounded, color: Colors.white),
-                'Comming Soon',
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const CategoryPage()));
+                },
+                child: CardField(
+                  size,
+                  Colors.purple,
+                  const Icon(Icons.image_rounded, color: Colors.white),
+                  'Kategori',
+                ),
               ),
-              CardField(
-                size,
-                Colors.green,
-                const Icon(Icons.image_rounded, color: Colors.white),
-                'Comming Soon',
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const BarangPage()));
+                },
+                child: CardField(
+                  size,
+                  Colors.green,
+                  const Icon(Icons.image_rounded, color: Colors.white),
+                  'Proyeksi',
+                ),
               ),
             ],
           )
