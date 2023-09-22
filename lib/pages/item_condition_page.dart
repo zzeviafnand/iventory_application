@@ -1,6 +1,8 @@
+// ignore_for_file: no_leading_underscores_for_local_identifiers, sized_box_for_whitespace, avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
 
-import '../components/appbar_content.dart';
+import '../components/appBar/appbar_content.dart';
 import '../components/data_widget.dart';
 
 class ItemConditionPage extends StatefulWidget {
@@ -56,7 +58,7 @@ class _ItemConditionPageState extends State<ItemConditionPage>
                 controller: _tabController,
                 labelColor: Colors.black,
                 unselectedLabelColor: Colors.black38,
-                tabs: [
+                tabs: const [
                   Tab(text: 'Kondisi Pertama'),
                   Tab(text: 'Kondisi Kedua'),
                   Tab(text: 'Kondisi Ketiga'),
@@ -64,22 +66,22 @@ class _ItemConditionPageState extends State<ItemConditionPage>
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Container(
-            height: 200,
+            height: 470,
             width: double.maxFinite,
             child: TabBarView(
               controller: _tabController,
-              children: [
+              children: const [
                 DataWidget(),
                 DataWidget(),
                 DataWidget(),
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 35,
           )
         ],

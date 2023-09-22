@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iventory_application/components/constant.dart';
 
 class ItemShowWidget extends StatelessWidget {
   const ItemShowWidget({
@@ -14,6 +15,18 @@ class ItemShowWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: primaryColor,
+        elevation: 1,
+        shape: ShapeBorder.lerp(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20)),
+          ),
+          null,
+          0,
+        ),
+        centerTitle: true,
         title: Text('Item'),
       ),
       body: ListView(

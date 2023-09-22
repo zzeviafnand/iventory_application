@@ -1,7 +1,9 @@
+// ignore_for_file: sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 
 import '../components/device_grid.dart';
-import '../components/gradien_container.dart';
+import '../components/appBar/gradien_container.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

@@ -1,8 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:iventory_application/components/category_data_widget.dart';
+// ignore_for_file: avoid_unnecessary_containers, sized_box_for_whitespace, no_leading_underscores_for_local_identifiers
 
-import '../components/appbar_content.dart';
-import '../components/data_widget.dart';
+import 'package:flutter/material.dart';
+
+import '../components/appBar/appbar_content.dart';
+import '../components/grid_kategori_widget.dart';
 
 class CategoryPage extends StatefulWidget {
   const CategoryPage({super.key});
@@ -57,7 +58,7 @@ class _CategoryPageState extends State<CategoryPage>
                 controller: _tabController,
                 labelColor: Colors.black,
                 unselectedLabelColor: Colors.black38,
-                tabs: [
+                tabs: const [
                   Tab(text: 'Kondisi Pertama'),
                   Tab(text: 'Kondisi Kedua'),
                   Tab(text: 'Kondisi Ketiga'),
@@ -73,44 +74,10 @@ class _CategoryPageState extends State<CategoryPage>
             width: double.maxFinite,
             child: TabBarView(
               controller: _tabController,
-              children: [
-                GridView.count(
-                  primary: false,
-                  padding: const EdgeInsets.all(20),
-                  crossAxisSpacing: 10,
-                  mainAxisSpacing: 10,
-                  crossAxisCount: 2,
-                  children: <Widget>[
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => const CategoryDataWidget()));
-                      },
-                      child: Container(
-                        padding: const EdgeInsets.all(8),
-                        color: Colors.teal[100],
-                        child: const Text("He'd have you all unravel at the"),
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      color: Colors.teal[200],
-                      child: const Text('Heed not the rabble'),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      color: Colors.teal[300],
-                      child: const Text('Sound of screams but the'),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      color: Colors.teal[400],
-                      child: const Text('Who scream'),
-                    ),
-                  ],
-                ),
-                DataWidget(),
-                DataWidget(),
+              children: const [
+                GridKategoriWidget(),
+                GridKategoriWidget(),
+                GridKategoriWidget(),
               ],
             ),
           ),

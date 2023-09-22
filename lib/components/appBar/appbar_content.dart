@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'constant.dart';
+import '../constant.dart';
 
-Container GradientContainer(Size size) {
+Container ContentContainer(Size size) {
   return Container(
     height: size.height * .2,
     width: size.width,
@@ -15,7 +15,7 @@ Container GradientContainer(Size size) {
     child: Container(
       decoration: BoxDecoration(
           borderRadius: const BorderRadius.only(
-            bottomLeft: Radius.circular(60),
+            bottomRight: Radius.circular(60),
           ),
           gradient: LinearGradient(colors: [
             secondaryColor.withOpacity(0.9),

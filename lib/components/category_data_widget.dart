@@ -34,7 +34,9 @@ class CategoryDataWidget extends StatelessWidget {
     //   400
     // ];
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('data'),
+      ),
       body: SafeArea(
         child: ListView.builder(
           padding: const EdgeInsets.all(8),

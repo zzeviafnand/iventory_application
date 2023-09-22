@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iventory_application/pages/barang_masuk_page.dart';
 import 'package:iventory_application/pages/category_page.dart';
 import 'package:iventory_application/pages/item_condition_page.dart';
+import 'package:iventory_application/pages/proyeksi_page.dart';
 
 import '../pages/barang_keluar_page.dart';
 import '../pages/data_barang_page.dart';
@@ -101,7 +102,7 @@ class DevicesGridDashboard extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const BarangPage()));
+                      builder: (context) => const ProyeksiPage()));
                 },
                 child: CardField(
                   size,

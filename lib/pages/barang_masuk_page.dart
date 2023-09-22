@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 
-import '../components/appbar_content.dart';
+import '../components/appBar/appbar_content.dart';
+import '../components/content/bm_widget.dart';
 import '../components/data_widget.dart';
-import '../components/bm_widget.dart';
 
 class BarangMasukPage extends StatefulWidget {
   const BarangMasukPage({super.key});
@@ -23,6 +23,7 @@ class _BarangMasukPageState extends State<BarangMasukPage> {
         children: [
           Stack(
             children: [
+              // ignore: sized_box_for_whitespace
               Container(
                 height: size.height * .2,
                 width: size.width,
@@ -51,29 +52,17 @@ class _BarangMasukPageState extends State<BarangMasukPage> {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Flexible(
+          const Flexible(
             child: DmWidget(),
           ),
-          SizedBox(
+          const SizedBox(
             height: 35,
           )
         ],
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   backgroundColor: Colors.cyan[100],
-      //   onPressed: () {},
-      //   child: const Icon(Icons.add_outlined),
-      // ),
-      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      // bottomNavigationBar: BottomAppBar(
-      //   height: 50,
-      //   color: Colors.blueGrey[200],
-      //   shape: const CircularNotchedRectangle(),
-      //   notchMargin: 5,
-      // ),
     );
   }
 }

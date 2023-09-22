@@ -1,6 +1,8 @@
+// ignore_for_file: sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 
-import '../components/appbar_content.dart';
+import '../components/appBar/appbar_content.dart';
 import '../components/data_widget.dart';
 
 class BarangPage extends StatefulWidget {
@@ -48,13 +50,13 @@ class _BarangPageState extends State<BarangPage> {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Flexible(
+          const Flexible(
             child: DataWidget(),
           ),
-          SizedBox(
+          const SizedBox(
             height: 35,
           )
         ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../components/appbar_content.dart';
-import '../components/bk_widget.dart';
+import '../components/appBar/appbar_content.dart';
+import '../components/content/bk_widget.dart';
 
 class BarangKeluarPage extends StatefulWidget {
   const BarangKeluarPage({super.key});
@@ -20,6 +20,7 @@ class _BarangKeluarPageState extends State<BarangKeluarPage> {
         children: [
           Stack(
             children: [
+              // ignore: sized_box_for_whitespace
               Container(
                 height: size.height * .2,
                 width: size.width,
@@ -48,13 +49,13 @@ class _BarangKeluarPageState extends State<BarangKeluarPage> {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Flexible(
+          const Flexible(
             child: BkWidget(),
           ),
-          SizedBox(
+          const SizedBox(
             height: 35,
           )
         ],
