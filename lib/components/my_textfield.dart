@@ -20,6 +20,11 @@ class MyTextField extends StatelessWidget {
         controller: controller,
         obscureText: obscureText,
         decoration: InputDecoration(
+            prefixIcon: Icon(
+              Icons.person_rounded,
+              size: 24,
+              color: Colors.grey[800],
+            ),
             enabledBorder: const OutlineInputBorder(
               borderSide: BorderSide(color: Colors.white),
             ),

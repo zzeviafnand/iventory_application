@@ -38,7 +38,11 @@ class DataWidget extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           return ListTile(
             selectedColor: Colors.blue,
-            leading: Icon(Icons.image_sharp),
+            leading: Container(
+              height: 90,
+              width: 50,
+              child: Image.asset('assets/login.png'),
+            ),
             title: Text(entries[index]),
             subtitle: Text('Mount'),
             trailing: Text('Date'),

@@ -15,7 +15,7 @@ class SubAppWidget extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: primaryColor,
       elevation: 1,
       shape: ShapeBorder.lerp(
-        RoundedRectangleBorder(
+        const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(20),
               bottomRight: Radius.circular(20)),
@@ -29,5 +29,5 @@ class SubAppWidget extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(70.0);
 }
