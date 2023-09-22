@@ -51,6 +51,7 @@ class DmWidget extends StatelessWidget {
                   builder: (context) => ItemShowWidget(
                     size: const Size(400.0, 400.0),
                     color: Colors.blue[700]!.withOpacity(0.5),
+                    title: Text('Barang Masuk'),
                   ),
                 ),
               );

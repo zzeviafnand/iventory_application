@@ -9,8 +9,8 @@ Container ContentContainer(Size size) {
     decoration: const BoxDecoration(
       borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30)),
-      // image: DecorationImage(
-      //     image: AssetImage('assets/bg.jpg'), fit: BoxFit.cover),
+      image: DecorationImage(
+          image: AssetImage('assets/barang.png'), fit: BoxFit.scaleDown),
     ),
     child: Container(
       decoration: BoxDecoration(

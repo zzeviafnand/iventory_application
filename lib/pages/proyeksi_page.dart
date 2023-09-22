@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iventory_application/components/appBar/proyeksi_content.dart';
 import 'package:iventory_application/components/dropdown_widget.dart';
 
 import '../components/appBar/appbar_content.dart';
@@ -25,7 +26,7 @@ class _ProyeksiPageState extends State<ProyeksiPage> {
                 height: size.height * .2,
                 width: size.width,
               ),
-              ContentContainer(size),
+              ProyeksiContainer(size),
               Positioned(
                 top: size.height * .10,
                 left: 30,
@@ -52,28 +53,15 @@ class _ProyeksiPageState extends State<ProyeksiPage> {
           const SizedBox(
             height: 10,
           ),
-          Container(
-            height: 300,
-            width: 400,
-            decoration: BoxDecoration(
-              color: Colors.grey.shade400,
-              borderRadius:
-                  const BorderRadius.only(bottomRight: Radius.circular(70.0)),
-            ),
-            child: const Column(
-              children: [
-                DropdownWidget(),
-                SizedBox(
-                  height: 10,
-                ),
-                DropdownWidget(),
-                SizedBox(
-                  height: 10,
-                ),
-                DropdownWidget(),
-              ],
-            ),
+          const DropdownWidget(),
+          const SizedBox(
+            height: 10,
           ),
+          const DropdownWidget(),
+          const SizedBox(
+            height: 10,
+          ),
+          const DropdownWidget(),
           const SizedBox(
             height: 35,
           ),

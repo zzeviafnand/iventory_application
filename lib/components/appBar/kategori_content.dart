@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../constant.dart';
 
-Container GradientContainer(Size size) {
+Container KategoriContainer(Size size) {
   return Container(
     height: size.height * .2,
     width: size.width,
@@ -10,12 +10,12 @@ Container GradientContainer(Size size) {
       borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30)),
       image: DecorationImage(
-          image: AssetImage('assets/iventori.png'), fit: BoxFit.scaleDown),
+          image: AssetImage('assets/kategori.png'), fit: BoxFit.scaleDown),
     ),
     child: Container(
       decoration: BoxDecoration(
           borderRadius: const BorderRadius.only(
-            bottomLeft: Radius.circular(60),
+            bottomRight: Radius.circular(60),
           ),
           gradient: LinearGradient(colors: [
             secondaryColor.withOpacity(0.9),

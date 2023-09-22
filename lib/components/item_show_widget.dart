@@ -1,32 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:iventory_application/components/constant.dart';
+
+import 'appBar/appbar_sub_widget.dart';
 
 class ItemShowWidget extends StatelessWidget {
   const ItemShowWidget({
     super.key,
+    required this.title,
     required this.size,
     required this.color,
   });
 
   final Size size;
+  final Text title;
   final Color color;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: primaryColor,
-        elevation: 1,
-        shape: ShapeBorder.lerp(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(20),
-                bottomRight: Radius.circular(20)),
-          ),
-          null,
-          0,
-        ),
-        centerTitle: true,
+      appBar: SubAppWidget(
         title: Text('Item'),
       ),
       body: ListView(

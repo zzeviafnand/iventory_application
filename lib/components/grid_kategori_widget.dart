@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import 'category_data_widget.dart';
 
 class GridKategoriWidget extends StatelessWidget {
-  const GridKategoriWidget({
-    super.key,
-  });
-
+  const GridKategoriWidget({super.key, required this.size});
+  final Size size;
   @override
   Widget build(BuildContext context) {
     return GridView.count(
@@ -21,26 +19,130 @@ class GridKategoriWidget extends StatelessWidget {
             Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) => const CategoryDataWidget()));
           },
-          child: Container(
-            padding: const EdgeInsets.all(8),
-            color: Colors.teal[100],
-            child: const Text("He'd have you all unravel at the"),
+          child: Card(
+            child: SizedBox(
+              height: size.height * .1,
+              width: size.width * .39,
+              child: Center(
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Expanded(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(8.0),
+                          topRight: Radius.circular(8.0),
+                        ),
+                        child: Image.asset(
+                          'lib/images/google.png',
+                          height: 150,
+                          width: 150,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
+                    Spacer(),
+                    Text('data'),
+                  ],
+                ),
+              ),
+            ),
           ),
         ),
-        Container(
-          padding: const EdgeInsets.all(8),
-          color: Colors.teal[200],
-          child: const Text('Heed not the rabble'),
+        Card(
+          child: SizedBox(
+            height: size.height * .1,
+            width: size.width * .39,
+            child: Center(
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Expanded(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(8.0),
+                        topRight: Radius.circular(8.0),
+                      ),
+                      child: Image.asset(
+                        'lib/images/google.png',
+                        height: 150,
+                        width: 150,
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                  Spacer(),
+                  Text('data'),
+                ],
+              ),
+            ),
+          ),
         ),
-        Container(
-          padding: const EdgeInsets.all(8),
-          color: Colors.teal[300],
-          child: const Text('Sound of screams but the'),
+        Card(
+          child: SizedBox(
+            height: size.height * .1,
+            width: size.width * .39,
+            child: Center(
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Expanded(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(8.0),
+                        topRight: Radius.circular(8.0),
+                      ),
+                      child: Image.asset(
+                        'lib/images/google.png',
+                        height: 150,
+                        width: 150,
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                  Spacer(),
+                  Text('data'),
+                ],
+              ),
+            ),
+          ),
         ),
-        Container(
-          padding: const EdgeInsets.all(8),
-          color: Colors.teal[400],
-          child: const Text('Who scream'),
+        Card(
+          child: SizedBox(
+            height: size.height * .1,
+            width: size.width * .39,
+            child: Center(
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Expanded(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(8.0),
+                        topRight: Radius.circular(8.0),
+                      ),
+                      child: Image.asset(
+                        'lib/images/google.png',
+                        height: 150,
+                        width: 150,
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                  Spacer(),
+                  Text('data'),
+                ],
+              ),
+            ),
+          ),
         ),
       ],
     );

@@ -35,7 +35,7 @@ class DevicesGridDashboard extends StatelessWidget {
                   size,
                   Colors.blue,
                   const Icon(
-                    Icons.filter_1_sharp,
+                    Icons.data_usage_outlined,
                     color: Colors.white,
                   ),
                   'Data Barang',
@@ -49,7 +49,7 @@ class DevicesGridDashboard extends StatelessWidget {
                 child: CardField(
                   size,
                   Colors.amber,
-                  const Icon(Icons.filter_2_sharp, color: Colors.white),
+                  const Icon(Icons.backpack_outlined, color: Colors.white),
                   'Barang Masuk',
                 ),
               ),
@@ -66,7 +66,7 @@ class DevicesGridDashboard extends StatelessWidget {
                 child: CardField(
                   size,
                   Colors.orange,
-                  const Icon(Icons.filter_3_sharp, color: Colors.white),
+                  const Icon(Icons.backpack_outlined, color: Colors.white),
                   'Barang Keluar',
                 ),
               ),
@@ -78,7 +78,7 @@ class DevicesGridDashboard extends StatelessWidget {
                 child: CardField(
                   size,
                   Colors.teal,
-                  const Icon(Icons.image_rounded, color: Colors.white),
+                  const Icon(Icons.shape_line_outlined, color: Colors.white),
                   'Kondisi Barang',
                 ),
               ),
@@ -95,7 +95,7 @@ class DevicesGridDashboard extends StatelessWidget {
                 child: CardField(
                   size,
                   Colors.purple,
-                  const Icon(Icons.image_rounded, color: Colors.white),
+                  const Icon(Icons.category_outlined, color: Colors.white),
                   'Kategori',
                 ),
               ),
@@ -107,7 +107,8 @@ class DevicesGridDashboard extends StatelessWidget {
                 child: CardField(
                   size,
                   Colors.green,
-                  const Icon(Icons.image_rounded, color: Colors.white),
+                  const Icon(Icons.production_quantity_limits_rounded,
+                      color: Colors.white),
                   'Proyeksi',
                 ),
               ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iventory_application/components/graphic/line_chart_widget.dart';
 
+import '../appBar/appbar_sub_widget.dart';
 import '../constant.dart';
 import '../graphic/barchart_widget.dart';
 import '../graphic/pie_chart_widget.dart';
@@ -18,20 +19,8 @@ class _GraphicWidgetState extends State<GraphicWidget>
   Widget build(BuildContext context) {
     TabController _tabController = TabController(length: 3, vsync: this);
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: primaryColor,
-        elevation: 1,
-        shape: ShapeBorder.lerp(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(20),
-                bottomRight: Radius.circular(20)),
-          ),
-          null,
-          0,
-        ),
-        centerTitle: true,
-        title: Text('Data Graphics'),
+      appBar: SubAppWidget(
+        title: Text('Data Graph'),
       ),
       body: Column(
         children: [

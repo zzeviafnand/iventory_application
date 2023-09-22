@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'appBar/appbar_sub_widget.dart';
 import 'item_show_widget.dart';
 
 class CategoryDataWidget extends StatelessWidget {
@@ -34,8 +35,8 @@ class CategoryDataWidget extends StatelessWidget {
     //   400
     // ];
     return Scaffold(
-      appBar: AppBar(
-        title: Text('data'),
+      appBar: SubAppWidget(
+        title: Text('List Data'),
       ),
       body: SafeArea(
         child: ListView.builder(
@@ -56,6 +57,7 @@ class CategoryDataWidget extends StatelessWidget {
                     builder: (context) => ItemShowWidget(
                       size: const Size(400.0, 400.0),
                       color: Colors.blue[700]!.withOpacity(0.5),
+                      title: Text('Category'),
                     ),
                   ),
                 );

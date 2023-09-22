@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../components/device_grid.dart';
+import '../components/menu_grid_widget.dart';
 import '../components/appBar/gradien_container.dart';
 
 class HomePage extends StatelessWidget {
