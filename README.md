@@ -2,7 +2,7 @@
 
 simple ui/ux for inventory
 
-## Getting Started
+## Inventory for pupuk
 
 This project is a starting point for a Flutter application.
 
