@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:iventory_application/components/appBar/proyeksi_content.dart';
 import 'package:iventory_application/components/dropdown_widget.dart';
 
-import '../components/appBar/appbar_content.dart';
 import '../components/content/graphic_widget.dart';
 
 class ProyeksiPage extends StatefulWidget {
@@ -33,7 +32,9 @@ class _ProyeksiPageState extends State<ProyeksiPage> {
                 child: Row(
                   children: [
                     InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context).pop();
+                        },
                         child: const Icon(Icons.arrow_back_ios_new)),
                     const SizedBox(
                       width: 12,

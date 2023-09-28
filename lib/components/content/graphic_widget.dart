@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:iventory_application/components/graphic/line_chart_widget.dart';
 
 import '../appBar/appbar_sub_widget.dart';
-import '../constant.dart';
 import '../graphic/barchart_widget.dart';
 import '../graphic/pie_chart_widget.dart';
 

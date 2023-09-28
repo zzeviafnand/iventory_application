@@ -2,8 +2,10 @@
 
 import 'package:flutter/material.dart';
 
-import '../components/appBar/appbar_content.dart';
+import '../components/constant.dart';
 import '../components/data_widget.dart';
+
+enum SampleItem { itemOne, itemTwo, itemThree }
 
 class BarangPage extends StatefulWidget {
   const BarangPage({super.key});
@@ -13,6 +15,7 @@ class BarangPage extends StatefulWidget {
 }
 
 class _BarangPageState extends State<BarangPage> {
+  SampleItem? selectedMenu;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -26,14 +29,37 @@ class _BarangPageState extends State<BarangPage> {
                 height: size.height * .2,
                 width: size.width,
               ),
-              ContentContainer(size),
+              Container(
+                height: size.height * .2,
+                width: size.width,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(30),
+                      bottomRight: Radius.circular(30)),
+                  image: DecorationImage(
+                      image: AssetImage('assets/barang.png'),
+                      fit: BoxFit.scaleDown),
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.only(
+                        bottomRight: Radius.circular(60),
+                      ),
+                      gradient: LinearGradient(colors: [
+                        secondaryColor.withOpacity(0.9),
+                        primaryColor.withOpacity(0.9)
+                      ])),
+                ),
+              ),
               Positioned(
                 top: size.height * .10,
                 left: 30,
                 child: Row(
                   children: [
                     InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context).pop();
+                        },
                         child: const Icon(Icons.arrow_back_ios_new)),
                     const SizedBox(
                       width: 12,
@@ -61,10 +87,29 @@ class _BarangPageState extends State<BarangPage> {
           )
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.cyan[100],
-        onPressed: () {},
-        child: const Icon(Icons.add_outlined),
+      floatingActionButton: MenuAnchor(
+        builder:
+            (BuildContext context, MenuController controller, Widget? child) {
+          return FloatingActionButton(
+            backgroundColor: Colors.black,
+            onPressed: () {
+              if (controller.isOpen) {
+                controller.close();
+              } else {
+                controller.open();
+              }
+            },
+            child: const Icon(Icons.add_outlined),
+          );
+        },
+        menuChildren: List<MenuItemButton>.generate(
+          3,
+          (int index) => MenuItemButton(
+            onPressed: () =>
+                setState(() => selectedMenu = SampleItem.values[index]),
+            child: Text('Item ${index + 1}'),
+          ),
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(

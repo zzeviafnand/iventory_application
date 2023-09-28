@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:iventory_application/components/appBar/kategori_content.dart';
 
-import '../components/appBar/appbar_content.dart';
 import '../components/grid_kategori_widget.dart';
 
 class CategoryPage extends StatefulWidget {
@@ -36,13 +35,15 @@ class _CategoryPageState extends State<CategoryPage>
                 child: Row(
                   children: [
                     InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context).pop();
+                        },
                         child: const Icon(Icons.arrow_back_ios_new)),
                     const SizedBox(
                       width: 12,
                     ),
                     const Text(
-                      "Kondisi Barang",
+                      "Kategori",
                       style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,

@@ -35,7 +35,9 @@ class _BarangMasukPageState extends State<BarangMasukPage> {
                 child: Row(
                   children: [
                     InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context).pop();
+                        },
                         child: const Icon(Icons.arrow_back_ios_new)),
                     const SizedBox(
                       width: 12,
