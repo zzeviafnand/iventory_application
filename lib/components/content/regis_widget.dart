@@ -45,9 +45,9 @@ class RegisWidget extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             // password textfield
-            PasswordField(),
+            const PasswordField(),
             const SizedBox(height: 10),
-            PasswordField(),
+            const PasswordField(),
             const SizedBox(height: 25),
             // sign in button
             RegButton(
