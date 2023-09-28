@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../field/reg_button.dart';
 import '../loginRegisComponent/my_textfield.dart';
 import '../loginRegisComponent/password_widget.dart';
+import '../loginRegisComponent/reg_button.dart';
 
 class RegisWidget extends StatelessWidget {
   RegisWidget({super.key});

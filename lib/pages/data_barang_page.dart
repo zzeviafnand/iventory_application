@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:iventory_application/components/appBar/navbar_top.dart';
+import 'package:iventory_application/components/menu_widget.dart';
 import '../components/data_widget.dart';
 
 enum SampleItem { itemOne, itemTwo, itemThree }
@@ -33,30 +34,7 @@ class _BarangPageState extends State<BarangPage> {
           )
         ],
       ),
-      floatingActionButton: MenuAnchor(
-        builder:
-            (BuildContext context, MenuController controller, Widget? child) {
-          return FloatingActionButton(
-            backgroundColor: Colors.black,
-            onPressed: () {
-              if (controller.isOpen) {
-                controller.close();
-              } else {
-                controller.open();
-              }
-            },
-            child: const Icon(Icons.add_outlined),
-          );
-        },
-        menuChildren: List<MenuItemButton>.generate(
-          3,
-          (int index) => MenuItemButton(
-            onPressed: () =>
-                setState(() => selectedMenu = SampleItem.values[index]),
-            child: Text('Item ${index + 1}'),
-          ),
-        ),
-      ),
+      floatingActionButton: const MenuWidget(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         height: 50,
