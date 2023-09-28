@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 
 import '../pages/data_barang_page.dart';
@@ -9,7 +11,7 @@ Padding CustomCard(Size size, context) {
       onTap: () => Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => BarangPage(),
+            builder: (context) => const BarangPage(),
           )),
       child: Container(
         height: size.height * .15,

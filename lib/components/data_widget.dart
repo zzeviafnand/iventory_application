@@ -38,14 +38,14 @@ class DataWidget extends StatelessWidget {
         itemBuilder: (BuildContext context, int index) {
           return ListTile(
             selectedColor: Colors.blue,
-            leading: Container(
+            leading: SizedBox(
               height: 90,
               width: 50,
               child: Image.asset('assets/login.png'),
             ),
             title: Text(entries[index]),
-            subtitle: Text('Mount'),
-            trailing: Text('Date'),
+            subtitle: const Text('Mount'),
+            trailing: const Text('Date'),
           );
         },
       ),

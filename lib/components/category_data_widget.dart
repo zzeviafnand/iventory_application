@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_interpolation_to_compose_strings
+
 import 'package:flutter/material.dart';
 
 import 'appBar/appbar_sub_widget.dart';
@@ -35,7 +37,7 @@ class CategoryDataWidget extends StatelessWidget {
     //   400
     // ];
     return Scaffold(
-      appBar: SubAppWidget(
+      appBar: const SubAppWidget(
         title: Text('List Data'),
       ),
       body: SafeArea(
@@ -47,7 +49,7 @@ class CategoryDataWidget extends StatelessWidget {
               selectedColor: Colors.blue,
               leading: Hero(
                 tag: 'hero-rectangle' + index.toString(),
-                child: Icon(
+                child: const Icon(
                   Icons.image_sharp,
                 ),
               ),
@@ -57,14 +59,14 @@ class CategoryDataWidget extends StatelessWidget {
                     builder: (context) => ItemShowWidget(
                       size: const Size(400.0, 400.0),
                       color: Colors.blue[700]!.withOpacity(0.5),
-                      title: Text('Category'),
+                      title: const Text('Category'),
                     ),
                   ),
                 );
               },
               title: Text(entries[index]),
-              subtitle: Text('Mount'),
-              trailing: Text('Date'),
+              subtitle: const Text('Mount'),
+              trailing: const Text('Date'),
             );
           },
         ),

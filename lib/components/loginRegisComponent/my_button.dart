@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:iventory_application/pages/login_page.dart';
+import 'package:iventory_application/pages/home_page.dart';
 
-class RegButton extends StatelessWidget {
+class MyButton extends StatelessWidget {
   final Function()? onTap;
-  RegButton({super.key, required this.onTap});
+
+  const MyButton({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => LoginPage(),
+          builder: (context) => const HomePage(),
         ));
       },
       child: Container(
@@ -22,7 +23,7 @@ class RegButton extends StatelessWidget {
         ),
         child: const Center(
           child: Text(
-            "Sign Up",
+            "Sign In",
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,

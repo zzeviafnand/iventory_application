@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 import '../components/menu_grid_widget.dart';
-import '../components/appBar/gradien_container.dart';
+import '../components/appBar/navbar_home.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -14,31 +14,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
         backgroundColor: const Color(0xfff5f7fa),
         body: Column(children: [
-          Stack(
-            children: [
-              Container(
-                height: size.height * .3,
-                width: size.width,
-              ),
-              GradientContainer(size),
-              Positioned(
-                top: size.height * .10,
-                left: 30,
-                child: const Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Iventory",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 26),
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
+          const NavbarHome(title: 'Iventory', imagePath: 'assets/iventori.png'),
           DevicesGridDashboard(size: size),
         ]));
   }

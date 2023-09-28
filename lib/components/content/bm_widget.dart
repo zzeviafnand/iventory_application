@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_interpolation_to_compose_strings
+
 import 'package:flutter/material.dart';
 import 'package:iventory_application/components/item_show_widget.dart';
 
@@ -41,7 +43,7 @@ class DmWidget extends StatelessWidget {
             selectedColor: Colors.blue,
             leading: Hero(
               tag: 'hero-rectangle' + index.toString(),
-              child: Icon(
+              child: const Icon(
                 Icons.image_sharp,
               ),
             ),
@@ -51,14 +53,14 @@ class DmWidget extends StatelessWidget {
                   builder: (context) => ItemShowWidget(
                     size: const Size(400.0, 400.0),
                     color: Colors.blue[700]!.withOpacity(0.5),
-                    title: Text('Barang Masuk'),
+                    title: const Text('Barang Masuk'),
                   ),
                 ),
               );
             },
             title: Text(entries[index]),
-            subtitle: Text('Mount'),
-            trailing: Text('Date'),
+            subtitle: const Text('Mount'),
+            trailing: const Text('Date'),
           );
         },
       ),

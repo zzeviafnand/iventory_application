@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-var secondaryColor = Color(0xcacaca);
-var primaryColor = Color(0xe0e0e0);
+var secondaryColor = const Color(0x00cacaca);
+var primaryColor = const Color(0x00e0e0e0);
 
-ShapeBorder kBackButtonShape = RoundedRectangleBorder(
+ShapeBorder kBackButtonShape = const RoundedRectangleBorder(
   borderRadius: BorderRadius.only(
     topRight: Radius.circular(30),
   ),
 );
 
-Widget kBackBtn = Icon(
+Widget kBackBtn = const Icon(
   Icons.arrow_back_ios,
   // color: Colors.black54,
 );

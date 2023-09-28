@@ -15,7 +15,7 @@ class _DropdownWidgetState extends State<DropdownWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(15),
+      padding: const EdgeInsets.all(15),
       child: DropdownMenu<String>(
         width: MediaQuery.of(context).size.width * 0.6,
         initialSelection: list.first,

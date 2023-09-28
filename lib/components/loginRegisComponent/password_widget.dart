@@ -1,3 +1,5 @@
+// ignore_for_file: curly_braces_in_flow_control_structures, library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 
 class PasswordField extends StatefulWidget {

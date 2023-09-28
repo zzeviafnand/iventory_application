@@ -26,12 +26,12 @@ class GridKategoriWidget extends StatelessWidget {
               child: Center(
                 child: Column(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 15,
                     ),
                     Expanded(
                       child: ClipRRect(
-                        borderRadius: BorderRadius.only(
+                        borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(8.0),
                           topRight: Radius.circular(8.0),
                         ),
@@ -43,8 +43,8 @@ class GridKategoriWidget extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Spacer(),
-                    Text('data'),
+                    const Spacer(),
+                    const Text('data'),
                   ],
                 ),
               ),
@@ -58,12 +58,12 @@ class GridKategoriWidget extends StatelessWidget {
             child: Center(
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   Expanded(
                     child: ClipRRect(
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(8.0),
                         topRight: Radius.circular(8.0),
                       ),
@@ -75,8 +75,8 @@ class GridKategoriWidget extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Spacer(),
-                  Text('data'),
+                  const Spacer(),
+                  const Text('data'),
                 ],
               ),
             ),
@@ -89,12 +89,12 @@ class GridKategoriWidget extends StatelessWidget {
             child: Center(
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   Expanded(
                     child: ClipRRect(
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(8.0),
                         topRight: Radius.circular(8.0),
                       ),
@@ -106,8 +106,8 @@ class GridKategoriWidget extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Spacer(),
-                  Text('data'),
+                  const Spacer(),
+                  const Text('data'),
                 ],
               ),
             ),
@@ -120,12 +120,12 @@ class GridKategoriWidget extends StatelessWidget {
             child: Center(
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   Expanded(
                     child: ClipRRect(
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(8.0),
                         topRight: Radius.circular(8.0),
                       ),
@@ -137,8 +137,8 @@ class GridKategoriWidget extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Spacer(),
-                  Text('data'),
+                  const Spacer(),
+                  const Text('data'),
                 ],
               ),
             ),

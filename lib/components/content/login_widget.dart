@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:iventory_application/components/password_widget.dart';
 
 import '../../pages/regis_page.dart';
-import '../my_button.dart';
-import '../my_textfield.dart';
+import '../loginRegisComponent/my_button.dart';
+import '../loginRegisComponent/my_textfield.dart';
+import '../loginRegisComponent/password_widget.dart';
 import '../square_tile.dart';
 
 class LoginWidget extends StatelessWidget {
@@ -25,7 +25,7 @@ class LoginWidget extends StatelessWidget {
             const SizedBox(height: 35),
 
             // logo
-            Container(
+            SizedBox(
               height: 100,
               width: 100,
               child: Image.asset('assets/login.png'),
@@ -54,7 +54,7 @@ class LoginWidget extends StatelessWidget {
             const SizedBox(height: 10),
 
             // password textfield
-            PasswordField(),
+            const PasswordField(),
 
             const SizedBox(height: 10),
 
@@ -121,14 +121,15 @@ class LoginWidget extends StatelessWidget {
                 // google button
                 InkWell(
                     onTap: () {},
-                    child: SquareTile(imagePath: 'lib/images/google.png')),
+                    child:
+                        const SquareTile(imagePath: 'lib/images/google.png')),
 
-                SizedBox(width: 25),
+                const SizedBox(width: 25),
 
                 // apple button
                 InkWell(
                     onTap: () {},
-                    child: SquareTile(imagePath: 'lib/images/apple.png'))
+                    child: const SquareTile(imagePath: 'lib/images/apple.png'))
               ],
             ),
 

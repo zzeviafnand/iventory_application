@@ -1,17 +1,18 @@
+// ignore_for_file: prefer_const_constructors_in_immutables
+
 import 'package:flutter/material.dart';
-import 'package:iventory_application/pages/home_page.dart';
+import 'package:iventory_application/pages/login_page.dart';
 
-class MyButton extends StatelessWidget {
+class RegButton extends StatelessWidget {
   final Function()? onTap;
-
-  const MyButton({super.key, required this.onTap});
+  RegButton({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => HomePage(),
+          builder: (context) => LoginPage(),
         ));
       },
       child: Container(
@@ -23,7 +24,7 @@ class MyButton extends StatelessWidget {
         ),
         child: const Center(
           child: Text(
-            "Sign In",
+            "Sign Up",
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
