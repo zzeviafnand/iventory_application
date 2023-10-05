@@ -12,21 +12,37 @@ class BarangMasukPage extends StatefulWidget {
   State<BarangMasukPage> createState() => _BarangMasukPageState();
 }
 
-class _BarangMasukPageState extends State<BarangMasukPage> {
+class _BarangMasukPageState extends State<BarangMasukPage>
+    with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Color(0xfff5f7fa),
+    TabController _tabController = TabController(length: 2, vsync: this);
+    return Scaffold(
+      backgroundColor: const Color(0xfff5f7fa),
       body: Column(
         children: [
-          NavbarTop(title: "Barang Masuk", imagePath: 'assets/barang.png'),
-          SizedBox(
+          const NavbarTop(
+              title: "Barang Masuk", imagePath: 'assets/barang.png'),
+          const SizedBox(
             height: 10,
           ),
-          Flexible(
+          Container(
+            child: Tab(
+              child: TabBar(
+                controller: _tabController,
+                labelColor: Colors.black,
+                unselectedLabelColor: Colors.black38,
+                tabs: const [
+                  Tab(text: 'Barang Masuk'),
+                  Tab(text: 'Data transaksi'),
+                ],
+              ),
+            ),
+          ),
+          const Flexible(
             child: DmWidget(),
           ),
-          SizedBox(
+          const SizedBox(
             height: 35,
           )
         ],

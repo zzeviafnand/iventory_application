@@ -14,24 +14,39 @@ class BarangPage extends StatefulWidget {
   State<BarangPage> createState() => _BarangPageState();
 }
 
-class _BarangPageState extends State<BarangPage> {
+class _BarangPageState extends State<BarangPage> with TickerProviderStateMixin {
   SampleItem? selectedMenu;
   @override
   Widget build(BuildContext context) {
+    TabController _tabController = TabController(length: 3, vsync: this);
     return Scaffold(
       backgroundColor: const Color(0xfff5f7fa),
-      body: const Column(
+      body: Column(
         children: [
-          NavbarTop(title: "Data Barang", imagePath: 'assets/barang.png'),
-          SizedBox(
+          const NavbarTop(title: "Data Barang", imagePath: 'assets/barang.png'),
+          const SizedBox(
             height: 10,
           ),
-          Flexible(
+          Container(
+            child: Tab(
+              child: TabBar(
+                controller: _tabController,
+                labelColor: Colors.black,
+                unselectedLabelColor: Colors.black38,
+                tabs: const [
+                  Tab(text: 'Data Pupuk'),
+                  Tab(text: 'Data Lokasi'),
+                  Tab(text: 'Data Distribusi'),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          const Flexible(
             child: DataWidget(),
           ),
-          SizedBox(
-            height: 35,
-          )
         ],
       ),
       floatingActionButton: const MenuWidget(),
